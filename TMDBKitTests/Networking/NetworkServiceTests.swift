@@ -15,7 +15,7 @@ final class NetworkServiceTests: XCTestCase {
     override func setUp() {
         super.setUp()
 
-        TMDBConfiguration.configure(apiKey: "test-api-key")
+        TMDBConfiguration.configure(accessToken: "test-access-token")
 
         let configuration = URLSessionConfiguration.ephemeral
         configuration.protocolClasses = [MockURLProtocol.self]

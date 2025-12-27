@@ -14,11 +14,11 @@ public protocol NetworkServiceProtocol {
 
 public final class NetworkService: NetworkServiceProtocol {
     private let session: URLSession
-    private let apiKey: String
+    private let accessToken: String
 
     public init(session: URLSession = .shared) {
         self.session = session
-        self.apiKey = TMDBConfiguration.shared.getAPIKey()
+        self.accessToken = TMDBConfiguration.shared.getAccessToken()
     }
     
     public func request<T: Decodable>(_ endpoint: Routable) async throws -> T {
@@ -49,9 +49,7 @@ public final class NetworkService: NetworkServiceProtocol {
             resolvingAgainstBaseURL: false
         )
         
-        var queryItems = endpoint.queryItems
-        queryItems.append(URLQueryItem(name: "api_key", value: apiKey))
-        components?.queryItems = queryItems.isEmpty ? nil : queryItems
+        components?.queryItems = endpoint.queryItems.isEmpty ? nil : endpoint.queryItems
         
         guard let url = components?.url else {
             throw NetworkError.invalidURL
@@ -66,6 +64,7 @@ public final class NetworkService: NetworkServiceProtocol {
         }
         
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.setValue("Bearer \(accessToken)", forHTTPHeaderField: "Authorization")
         
         return request
     }

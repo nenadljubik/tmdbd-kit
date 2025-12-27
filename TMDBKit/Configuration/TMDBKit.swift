@@ -10,18 +10,18 @@ import Foundation
 public final class TMDBConfiguration {
     public static let shared = TMDBConfiguration()
 
-    private var apiKey: String?
+    private var accessToken: String?
 
     private init() {}
 
-    public static func configure(apiKey: String) {
-        shared.apiKey = apiKey
+    public static func configure(accessToken: String) {
+        shared.accessToken = accessToken
     }
 
-    internal func getAPIKey() -> String {
-        guard let apiKey = apiKey else {
-            fatalError("TMDBKit: API key not configured. Call TMDBConfiguration.configure(apiKey:) before using the SDK.")
+    internal func getAccessToken() -> String {
+        guard let accessToken = accessToken else {
+            fatalError("TMDBKit: Access token not configured. Call TMDBConfiguration.configure(accessToken:) before using the SDK.")
         }
-        return apiKey
+        return accessToken
     }
 }
