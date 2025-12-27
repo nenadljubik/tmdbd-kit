@@ -1,0 +1,25 @@
+{
+  "configurations" : [
+    {
+      "id" : "8FABCC81-617D-4F06-9AE2-38657976F9AB",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "performanceAntipatternCheckerEnabled" : true
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:TMDBKit.xcodeproj",
+        "identifier" : "555E7B982EFFF52B00387C7C",
+        "name" : "TMDBKitTests"
+      }
+    }
+  ],
+  "version" : 1
+}
