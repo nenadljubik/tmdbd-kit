@@ -6,8 +6,40 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		55243B302F00049C0030016C /* DataFixtures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55243B2F2F00049C0030016C /* DataFixtures.swift */; };
+		55243B322F0005AA0030016C /* FixturesConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55243B312F0005AA0030016C /* FixturesConstants.swift */; };
+		55243B342F00090F0030016C /* JSONFixtures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55243B332F00090F0030016C /* JSONFixtures.swift */; };
+		555E7BB12EFFF5A700387C7C /* TMDBKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 554D3AEF2EFF3AF0001C19B0 /* TMDBKit.framework */; };
+		555E7BC52EFFF80700387C7C /* NetworkServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555E7BB92EFFF80700387C7C /* NetworkServiceTests.swift */; };
+		555E7BC72EFFF80700387C7C /* TMDBSearchServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555E7BBC2EFFF80700387C7C /* TMDBSearchServiceTests.swift */; };
+		555E7BC82EFFF80700387C7C /* TMDBMoviesServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555E7BBB2EFFF80700387C7C /* TMDBMoviesServiceTests.swift */; };
+		555E7BCA2EFFF80700387C7C /* MockURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555E7BB72EFFF80700387C7C /* MockURLSession.swift */; };
+		555E7BCB2EFFF80700387C7C /* MockNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555E7BB62EFFF80700387C7C /* MockNetworkService.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		555E7B9E2EFFF52B00387C7C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 554D3AE62EFF3AF0001C19B0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 554D3AEE2EFF3AF0001C19B0;
+			remoteInfo = TMDBKit;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		55243B2F2F00049C0030016C /* DataFixtures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFixtures.swift; sourceTree = "<group>"; };
+		55243B312F0005AA0030016C /* FixturesConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixturesConstants.swift; sourceTree = "<group>"; };
+		55243B332F00090F0030016C /* JSONFixtures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONFixtures.swift; sourceTree = "<group>"; };
 		554D3AEF2EFF3AF0001C19B0 /* TMDBKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TMDBKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		555E7B992EFFF52B00387C7C /* TMDBKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TMDBKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		555E7BB62EFFF80700387C7C /* MockNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkService.swift; sourceTree = "<group>"; };
+		555E7BB72EFFF80700387C7C /* MockURLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLSession.swift; sourceTree = "<group>"; };
+		555E7BB92EFFF80700387C7C /* NetworkServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceTests.swift; sourceTree = "<group>"; };
+		555E7BBB2EFFF80700387C7C /* TMDBMoviesServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMDBMoviesServiceTests.swift; sourceTree = "<group>"; };
+		555E7BBC2EFFF80700387C7C /* TMDBSearchServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMDBSearchServiceTests.swift; sourceTree = "<group>"; };
+		55FA150D2F000AE100D39EC6 /* TMDBKitTests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = TMDBKitTests.xctestplan; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -26,6 +58,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		555E7B962EFFF52B00387C7C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				555E7BB12EFFF5A700387C7C /* TMDBKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -33,6 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				554D3AF12EFF3AF0001C19B0 /* TMDBKit */,
+				555E7BBD2EFFF80700387C7C /* TMDBKitTests */,
 				554D3AF02EFF3AF0001C19B0 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -41,8 +82,65 @@
 			isa = PBXGroup;
 			children = (
 				554D3AEF2EFF3AF0001C19B0 /* TMDBKit.framework */,
+				555E7B992EFFF52B00387C7C /* TMDBKitTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		555E7BB52EFFF80700387C7C /* Fixtures */ = {
+			isa = PBXGroup;
+			children = (
+				55243B312F0005AA0030016C /* FixturesConstants.swift */,
+				55243B2F2F00049C0030016C /* DataFixtures.swift */,
+				55243B332F00090F0030016C /* JSONFixtures.swift */,
+			);
+			path = Fixtures;
+			sourceTree = "<group>";
+		};
+		555E7BB82EFFF80700387C7C /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				555E7BB62EFFF80700387C7C /* MockNetworkService.swift */,
+				555E7BB72EFFF80700387C7C /* MockURLSession.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		555E7BBD2EFFF80700387C7C /* TMDBKitTests */ = {
+			isa = PBXGroup;
+			children = (
+				555E7BB52EFFF80700387C7C /* Fixtures */,
+				555E7BB82EFFF80700387C7C /* Mocks */,
+				55FA15342F000F6F00D39EC6 /* Networking */,
+				55FA15322F000F4900D39EC6 /* Movies */,
+				55FA15332F000F5900D39EC6 /* Search */,
+				55FA150D2F000AE100D39EC6 /* TMDBKitTests.xctestplan */,
+			);
+			path = TMDBKitTests;
+			sourceTree = "<group>";
+		};
+		55FA15322F000F4900D39EC6 /* Movies */ = {
+			isa = PBXGroup;
+			children = (
+				555E7BBB2EFFF80700387C7C /* TMDBMoviesServiceTests.swift */,
+			);
+			path = Movies;
+			sourceTree = "<group>";
+		};
+		55FA15332F000F5900D39EC6 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				555E7BBC2EFFF80700387C7C /* TMDBSearchServiceTests.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		55FA15342F000F6F00D39EC6 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				555E7BB92EFFF80700387C7C /* NetworkServiceTests.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -81,6 +179,26 @@
 			productReference = 554D3AEF2EFF3AF0001C19B0 /* TMDBKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		555E7B982EFFF52B00387C7C /* TMDBKitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 555E7BA22EFFF52B00387C7C /* Build configuration list for PBXNativeTarget "TMDBKitTests" */;
+			buildPhases = (
+				555E7B952EFFF52B00387C7C /* Sources */,
+				555E7B962EFFF52B00387C7C /* Frameworks */,
+				555E7B972EFFF52B00387C7C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				555E7B9F2EFFF52B00387C7C /* PBXTargetDependency */,
+			);
+			name = TMDBKitTests;
+			packageProductDependencies = (
+			);
+			productName = TMDBKitTests;
+			productReference = 555E7B992EFFF52B00387C7C /* TMDBKitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -92,6 +210,9 @@
 				LastUpgradeCheck = 2620;
 				TargetAttributes = {
 					554D3AEE2EFF3AF0001C19B0 = {
+						CreatedOnToolsVersion = 26.2;
+					};
+					555E7B982EFFF52B00387C7C = {
 						CreatedOnToolsVersion = 26.2;
 					};
 				};
@@ -111,12 +232,20 @@
 			projectRoot = "";
 			targets = (
 				554D3AEE2EFF3AF0001C19B0 /* TMDBKit */,
+				555E7B982EFFF52B00387C7C /* TMDBKitTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		554D3AED2EFF3AF0001C19B0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		555E7B972EFFF52B00387C7C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -133,7 +262,30 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		555E7B952EFFF52B00387C7C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				555E7BC52EFFF80700387C7C /* NetworkServiceTests.swift in Sources */,
+				55243B342F00090F0030016C /* JSONFixtures.swift in Sources */,
+				55243B322F0005AA0030016C /* FixturesConstants.swift in Sources */,
+				555E7BC72EFFF80700387C7C /* TMDBSearchServiceTests.swift in Sources */,
+				55243B302F00049C0030016C /* DataFixtures.swift in Sources */,
+				555E7BC82EFFF80700387C7C /* TMDBMoviesServiceTests.swift in Sources */,
+				555E7BCA2EFFF80700387C7C /* MockURLSession.swift in Sources */,
+				555E7BCB2EFFF80700387C7C /* MockNetworkService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		555E7B9F2EFFF52B00387C7C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 554D3AEE2EFF3AF0001C19B0 /* TMDBKit */;
+			targetProxy = 555E7B9E2EFFF52B00387C7C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		554D3AF42EFF3AF0001C19B0 /* Debug */ = {
@@ -346,6 +498,65 @@
 			};
 			name = Release;
 		};
+		555E7BA02EFFF52B00387C7C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
+				MACOSX_DEPLOYMENT_TARGET = 15.6;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ljubikn.TMDBKitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SUPPORTED_PLATFORMS = "appletvos appletvsimulator iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,3";
+			};
+			name = Debug;
+		};
+		555E7BA12EFFF52B00387C7C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
+				MACOSX_DEPLOYMENT_TARGET = 15.6;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ljubikn.TMDBKitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SUPPORTED_PLATFORMS = "appletvos appletvsimulator iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,3";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -363,6 +574,15 @@
 			buildConfigurations = (
 				554D3AF72EFF3AF0001C19B0 /* Debug */,
 				554D3AF82EFF3AF0001C19B0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		555E7BA22EFFF52B00387C7C /* Build configuration list for PBXNativeTarget "TMDBKitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				555E7BA02EFFF52B00387C7C /* Debug */,
+				555E7BA12EFFF52B00387C7C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
