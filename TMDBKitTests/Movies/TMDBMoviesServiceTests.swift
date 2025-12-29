@@ -35,18 +35,6 @@ final class TMDBMoviesServiceTests: XCTestCase {
         XCTAssertEqual(result.results?.first?.title, FixturesConstants.Movie.title)
     }
 
-    func testFetchMovieDetailsSuccess() async throws {
-        mockNetworkService.mockResponse = DataFixtures.MovieDetailsUtils.create()
-
-        let result = try await sut.fetchMovieDetails(id: FixturesConstants.MovieDetails.id)
-
-        XCTAssertEqual(mockNetworkService.requestCallCount, 1)
-        XCTAssertEqual(result.id, FixturesConstants.MovieDetails.id)
-        XCTAssertEqual(result.title, FixturesConstants.MovieDetails.title)
-        XCTAssertEqual(result.budget, FixturesConstants.MovieDetails.budget)
-        XCTAssertEqual(result.revenue, FixturesConstants.MovieDetails.revenue)
-    }
-
     func testFetchTrendingMoviesThrowsError() async throws {
         mockNetworkService.mockError = NetworkError.httpError(statusCode: 500)
 

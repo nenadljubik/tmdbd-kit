@@ -10,20 +10,17 @@ import Foundation
 
 enum MovieRouter: Routable {
     case trending(page: Int)
-    case movieDetails(id: Int)
 
     var path: String {
         switch self {
         case .trending:
             "/3/trending/movie/week"
-        case .movieDetails(let id):
-            "/3/movie/\(id)"
         }
     }
 
     var method: HTTPMethod {
         switch self {
-        case .trending, .movieDetails:
+        case .trending:
             .get
         }
     }
@@ -32,8 +29,6 @@ enum MovieRouter: Routable {
         switch self {
         case .trending(let page):
             [URLQueryItem(name: "page", value: "\(page)")]
-        case .movieDetails:
-            []
         }
     }
 }

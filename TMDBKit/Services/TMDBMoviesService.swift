@@ -10,7 +10,6 @@ import Foundation
 
 public protocol TMDBMoviesServiceProtocol {
     func fetchTrendingMovies(page: Int) async throws -> MovieResponse
-    func fetchMovieDetails(id: Int) async throws -> MovieDetails
 }
 
 public final class TMDBMoviesService: TMDBMoviesServiceProtocol {
@@ -26,9 +25,5 @@ public final class TMDBMoviesService: TMDBMoviesServiceProtocol {
 
     public func fetchTrendingMovies(page: Int) async throws -> MovieResponse {
         try await networkService.request(MovieRouter.trending(page: page))
-    }
-
-    public func fetchMovieDetails(id: Int) async throws -> MovieDetails {
-        try await networkService.request(MovieRouter.movieDetails(id: id))
     }
 }
